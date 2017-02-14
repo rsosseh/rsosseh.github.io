@@ -1,0 +1,40 @@
+<script src="../lib/tracery.js"></script>
+<script src="../lib/mousetrap.min.js"></script>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script>
+var grammarObj = {
+	"S":["#sentance#. #sentance#. #sentance#. #sentance#"],
+	"sentance":["The #adjective# #noun# #verb# #place#","If not for the #noun#, we would be #ending#","Dont forget, never forget","Always be #adjective# though"],
+	"adjective":['smelly','good-looking','fantastic','all-knowing','not that great','always clever','never aware','music loving','savory','nonsensical','optimistic','pessimistic','hovering','flying','mystical','sagely','wise','stupid','Argentinian','Brazilian','Japanese','orange','pink','kawaii','small','large','regular sized','quite average'],
+	"noun":['dog','woman', 'man','taco','house','building','bubble','keyboardist','person','group of hoodlums','gaggle of teens','falcon','bear','hip hop enthusiast','musician','record player','branch','speaker','laptop','bird'],
+	"verb":['went to','escaped from','ran to','liked staying at','sometimes threw eggs at','was told never to go to','snuck out of','is acutely aware of','questioned the size of','loved going to'],
+	"place":['the house','the academy','that place where people sometimes go','the orthodontist','that pile of sticks over there','the red room','the green room','the room whose color is not easily defined','California','Colorado','the record shop','the bird cage'],
+	"ending":['fucked','saved','dead','still running away from that bear','eating dank bites','miles away','together','split apart','saving so much money on our car ensurance']
+}
+var grammar = tracery.createGrammar(grammarObj)
+function generate(){
+	var t = grammar.flatten("#S#");
+	$('h1').text(t);
+}
+</script>
+<style type="text/css">
+	*{
+		font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+		background-image: url('http://wallup.net/wp-content/uploads/2016/05/25/239327-vaporwave-glitch_art.jpg');
+	}
+	h1{
+		font-size: 3em;
+		font-weight: inherit;
+		padding-top: 15%;
+	}
+	button{
+		font-size: 2em;
+	}
+</style>
+
+<html>
+	<body>
+		<center><h1>press that \/ button</h1>
+		<button onclick="generate()">this one</button></center>
+	</body>
+</html>
