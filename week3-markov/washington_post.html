@@ -6,13 +6,13 @@
 		$.get('trump.txt', function(text){
 			markov.feed(text)
 		});	
-		function generate(){
-			$('#wash').show();
-			$('button#butt').hide();
-			var t = markov.generate()
-			$('article').append("<p>"+t+"</p>")
-		}
 	})
+	function generate(){
+		$('#wash').show();
+		$('button#butt').hide();
+		var t = markov.generate()
+		$('article').append("<p>"+t+"</p>")
+	}
 </script>
 <style>
 	*{
