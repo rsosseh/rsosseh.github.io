@@ -1,7 +1,7 @@
 <script src="../lib/jquery-1.11.1.min.js"></script>
 <script src="../lib/markov.js"></script>
 <script>
-	$(window).load(function(){
+	$(window).on('load', function(){
 		var markov = new MarkovGeneratorWord(2,99999999)
 		$.get('trump.txt', function(text){
 			markov.feed(text)
