@@ -1,87 +1,196 @@
 <html>
 	<head>
-		<title>~☼ ray sosseh ☼~</title>
+		<title>Ray M. Sosseh</title>
 		<style type="text/css">
 			*{
 				margin: 0;
-				padding: 0;
-				font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-				z-index: 0;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-weight: lighter;
 			}
-			#header{
+			body {
+				background: rgba(231, 231, 231, 0.43);
+			}
+			.free-wall {
+				margin: 15px;
+			}
+			.brick {
+				width: 299px;
+			}
+			.info {
+				padding: 20px;
+				color: #333;
+			}
+			.info h3, .info h5{
+				font-weight: normal;
+			}
+			.info h5{
+				padding-top: 8%;
+			}
+			.brick img {
+				margin: 0px;
+				padding: 0px;
+				display: block;
+			}
+			#header_wrapper{
+				background-image: url('images/hike.jpg');
+				background-repeat: no-repeat;
+				-webkit-background-size: cover;
+		        -moz-background-size: cover;
+		        -o-background-size: cover;
+		        background-size: cover;
+		        background-position: center;
+				height:100vh;
+				color: white;
+			}
+			#name{
 				padding-top: 5%;
-				padding-bottom: 5%;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-				background-image: url('img/trans_diagonal-striped-brick.png');
+				text-align: center;
+				font-size: 5em;
+				font-weight: lighter;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: #fff;
 			}
-			#header h1{
-				font-size: 4em;
-    			font-weight: inherit;
+			#top_text p{
+				width:40%;
+				font-size: 1.2em;	
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
 			}
-			#header_img img{
-				width: 14%;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   				position: absolute;
-    			left: 0;
-    			right: 0;
-    			margin-left: auto;
-    			margin-right: auto;
-    			margin-top: -3%;
-    			border-radius: 100%;
-    			z-index: 1;
-			}
-			.panel{
-				position: relative;
-			}
-			.panel img{
-				height: 1%;
-				display: inline-block;
-			}
-			.info{
-				width: 40%;
-				position: absolute;
+			#me{
+				width: 20%;
+				padding:.3%;
 				background-color: whitesmoke;
-				top:0;
-				right:0;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				border:solid grey 2px;
+				border-radius: 3%;
+				margin-top: 3%;
 			}
-			.text{
-				padding: 10%;
+			#button{
+				position: absolute;
+				bottom: 7%;
+				left: 0;
+				right: 0;
+				margin-right: auto;
+				margin-left: auto;
+				width: 3%;
+
 			}
-			.text h2{
-				font-size: 1.3em;
-				padding-bottom: 20%;
+			#work{
+				min-height: 100vh;
+				max-width: 89%;
+				margin-left: auto;
+				margin-right: auto;
 			}
-			.text p{
-				font-size: 2em;
-				padding-left: 5%;
-			}
-		</style>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('.panel img').css('height',$(window).height()-$('#header').outerHeight());
-				$('.info').css('height',$(window).height()-$('#header').outerHeight());
-			});
+		</style> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/pinterest-style.css" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/freewall.js"></script>
+		<script>
+			function scroll_down(){
+				$('#work').show();
+				$('html, body').animate({
+    				scrollTop: ($('#work').offset().top)
+				},1000);
+			};
 		</script>
 	</head>
 	<body>
-		<div id="header">
-			<center><H1>°˖✧☼✌ ray sosseh ✌☼✧˖° </H1></center>	
+		<div id="header_wrapper">
+			<div id="top_text">
+				<h1 id="name">Hey, I'm Ray 👋🏿</h1>
+				<p>I'm a digital artist and I like working in a couple of different mediums. Check out some of my past projects below!</p>
+				<center><img id="me" src="images/me.JPG"></center>
+			</div>
+			<a onclick="scroll_down()" href="#"><img id="button" src='images/down_button.png'></a>
 		</div>
-		<div id="header_img">
-			<img src="img/me.JPG"></img>
-		</div>
-		<div id="content">
-			<div class="panel">
-				<img src="img/framed.png">
-				<div class="info">
-					<div class="text">
-						<h2>inspirational twitter bot <a href="http://twitter.com/framedtext">link</a>. longer, html version <a href="/week2-tracery/a_great_paragraph.html">here</a></h2>
-						<p>Framed</p>
-					</div>
-				</div>
+		<div id='work'>
+			<div id="freewall" class="free-wall">
+			    <div class="brick">
+			        <a href="http://agorapartnerships.org"><img src="images/agora.png" width="100%"></a>
+			        <div class="info">
+			            <h3>Agora Partnerships</h3>
+			            <h5>I editted their WP site by adding plugins layout changes</h5>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <img src="images/newsletter.jpg" width="100%">
+			        <div class="info">
+			            <h3>Capitol Records Newsletter Design</h3>
+			            <h5>Refreshed the newsletter templates of Hollywood record label</h5>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <a href='https://vimeo.com/155072344'><img src="images/bee.png" width="100%"></a>
+			        <div class="info">
+			            <h3>Bee and Puppycat Re-sound Design</h3>
+			            <h5>Added entirely new foley and music to an episode of this series</h5>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <img src="images/fansome.png" width="100%">
+			        <div class="info">
+			            <h3>Fansome</h3>
+			            <h5>Created prototype of artist data visualizer</h5>
+			        </div>
+			    </div>
+			     <div class="brick">
+			        <a href='http://overthinkersanonymo.us/'><img src="images/oa.gif" width="100%"></a>
+			        <div class="info">
+			            <h3>Overthinkers Anonymous</h3>
+			            <h5>Created a Javascript fueled audio visualizer for an original song of mine</h5>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <img src="images/anime.jpg" width="100%">
+			        <div class="info">
+			            <h3>Making memes is fun :)</h3>
+			        </div>
+			    </div>
+			   <div class="brick">
+			        <img src="images/gucci.jpg" width="100%">
+			        <div class="info">
+			            <h3>Making memes is fun :)</h3>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <a href='spotify:album:2WAVOxmj7KXHWRKI1dd5jG'><img src="images/raven.jpg" width="100%"></a>
+			        <div class="info">
+			            <h3>Greytail - Raven</h3>
+			            <h5>Original music by me</h5>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <a href='https://vimeo.com/151452558'><img src="images/sap.png" width="100%"></a>
+			        <div class="info">
+			            <h3>Skate and Play</h3>
+			            <h5>Sound Designer for a skateboard that creates music as you ride it</h5>
+			        </div>
+			    </div>
+			    <div class="brick">
+			        <a href='https://soundcloud.com/candy_fiend'><img src="images/yung_sugar.jpg" width="100%"></a>
+			        <div class="info">
+			            <h3>Yung Sugar</h3>
+			            <h5>fun Soundcloud page I made to put all my cute beats on</h5>
+			        </div>
+			    </div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var wall = new Freewall("#freewall");
+			wall.reset({
+				selector: '.brick',
+				animate: true,
+				cellHlW: 200,
+				cellH: 'auto',
+				onResize: function() {
+					wall.fitWidth();
+				}
+			});
+
+			wall.container.find('.brick img').load(function() {
+				wall.fitWidth();
+			});
+		</script>
 	</body>
 </html>
