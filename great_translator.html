@@ -1,0 +1,65 @@
+<style>
+	*{
+		font-size: 1.3em;
+		font-family: 'Helvetica Neue';
+		font-weight: lighter;
+	}
+	textarea{
+		display: inline-block;
+		width: 100%;
+		height: 100vh;
+		border:5px solid whitesmoke;
+		border-radius: 2%;
+	}
+	#entered_text{
+		display: inline-block;
+		width:48%;
+	}
+	#translated{
+		display: inline-block;
+		float: right;
+		width:48%;
+		height: 100vh;
+		border:5px solid whitesmoke;
+		border-radius: 2%;
+	}
+</style>
+<script src="lib/jquery-1.11.1.min.js"></script>
+<script src="lib/mousetrap.min.js"></script>
+<script src="lib/responsivevoice.js"></script>
+<script type="text/javascript">
+	var type = 'reg';
+	Mousetrap.bind("?", function(){
+		type = 'question';
+	});
+	Mousetrap.bind("!", function(){
+		type = 'exclaim';
+	});
+	Mousetrap.bind("enter", function(){
+		console.log('doipe');
+		translate();
+	});
+	function translate(){
+		if (type == 'reg'){
+			responsiveVoice.speak('yo ooo');
+			$('translated_text').text('yoooo');
+		}
+		else if (type=='question'){
+			responsiveVoice.speak('yo?');
+			$('translated_text').text('yoo?');
+		}
+		else if (type=='exlaim'){
+			responsiveVoice.speak('yo ooo!');
+			$('translated_text').text('YOOO!');
+		}
+		type = 'reg';
+	}
+</script>
+<body>
+	<div id='entered_text'>
+		<textarea />Press enter to translate</textarea>
+	</div>
+	<div id='translated'>
+		<h1 id='translated_text'>Translated text here<h1>
+	</div>	
+</body>
