@@ -61,12 +61,13 @@
 			}
 			.brick{
 				font-family: 'Playfair Display', serif;
-				display: inline-block;
+				display: none;
+				/*display: inline-block;*/
 				vertical-align: bottom;
 				width: 26%;
 				height: 50%;
-				border: 5px #535353 solid;
-				border-radius: 2%;
+				background-color: white;
+				border: 3px #B2B2B2 solid;
 				padding: 1%;
 				margin: 1%;
 
@@ -77,6 +78,7 @@
 			}
 			.brick h3{
 				font-size: 1.5em;
+				color: #4C9FAB;
 				padding-bottom: 4%;
 			}
 			#contact{
@@ -185,7 +187,8 @@
 				$('#contact').show();
 				$('html, body').animate({
     				scrollTop: ($('#projects').offset().top)
-				},1000);	
+				},1000);
+				$('.brick').fadeIn(1500).css("display","inline-block");
 			}
 		</script>
 	</head>
