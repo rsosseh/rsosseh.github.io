@@ -56,9 +56,6 @@
 				border-radius: 3%;
 				border: 15px white solid;
 			}
-			#proj-back{
-				/*background-color: #EFFFBE;*/
-			}
 			#projects{
 				width: 75%;
 				padding-bottom: 4%;
@@ -69,7 +66,7 @@
 			}
 			.brick{
 				font-family: 'Playfair Display', serif;
-				display: inline-block;
+				display: none;
 				vertical-align: bottom;
 				width: 26%;
 				height: 50%;
@@ -290,10 +287,11 @@
 		<script type="text/javascript">
 			$(function() {
 				$(window).scroll(function () {
-					if ($(this).scrollTop() > 450) {
+					if ($(this).scrollTop() > 150) {
 						$('body').addClass('change-color');
+						$(".brick").fadeIn(1000).css("display","inline-block");
 					};
-					if ($(this).scrollTop() < 450) {
+					if ($(this).scrollTop() < 150) {
 						$('body').removeClass('change-color');
 					};
 				});
