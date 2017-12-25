@@ -4,15 +4,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:700" rel="stylesheet">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<style type="text/css">
 			*{
 				padding: 0;
 				margin: 0;
 			}
+			body{
+				background-color: #DEBF10;
+				transition: 0.5s all;
+			}
+			.change-color{
+				background-color: #9EFFFB;
+				transition: 0.5s all;
+			}
 			#landing{
 				font-family: 'Raleway', "Arial Black", Gadget, sans-serif;
 				height: 100vh;
-				background-color: #DEBF10;
 				color: #fff;
 			}
 			#text{
@@ -49,10 +57,9 @@
 				border: 15px white solid;
 			}
 			#proj-back{
-				background-color: #EFFFBE;
+				/*background-color: #EFFFBE;*/
 			}
 			#projects{
-				display: none;
 				width: 75%;
 				padding-bottom: 4%;
 			}
@@ -62,8 +69,7 @@
 			}
 			.brick{
 				font-family: 'Playfair Display', serif;
-				display: none;
-				/*display: inline-block;*/
+				display: inline-block;
 				vertical-align: bottom;
 				width: 26%;
 				height: 50%;
@@ -83,7 +89,6 @@
 				padding-bottom: 4%;
 			}
 			#contact{
-				display: none;
 				background-color: #A3B5F3;
 				color: #16349E;
 				padding-bottom: 4%;
@@ -181,17 +186,6 @@
 			}
 
 		</style>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			function scroll_down(){
-				$('#projects').show();
-				$('#contact').show();
-				$('html, body').animate({
-    				scrollTop: ($('#projects').offset().top)
-				},1000);
-				$('.brick').fadeIn(1500).css("display","inline-block");
-			}
-		</script>
 	</head>
 	<body>
 		
@@ -204,7 +198,7 @@
 			<div id='pro-pic'>
 				<center><img src="imgs/me.JPG"></center>
 			</div>
-			<a onclick='scroll_down()' href='#'><img id='down-button' src="imgs/down_button.png"></a>
+			<a onclick='scroll_down()' href='#'><img id='down-button' src="imgs/downarrow_whte.png"></a>
 		</div>
 		
 		<center><div id='proj-back'><div id='projects'>
@@ -292,5 +286,18 @@
 			<center><h1>Contact</h1></center>
 			<center><p><a href='mailto:ray.sosseh@gmail.com'>email</a> - <a href='http://linkedin.com/in/raysosseh/'>linkedin</a></p></center>
 		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 450) {
+						$('body').addClass('change-color');
+					};
+					if ($(this).scrollTop() < 450) {
+						$('body').removeClass('change-color');
+					};
+				});
+			});
+		</script>
 	</body>
 </html>
