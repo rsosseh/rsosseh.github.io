@@ -66,7 +66,6 @@
 			}
 			.brick{
 				font-family: 'Playfair Display', serif;
-				display: none;
 				vertical-align: bottom;
 				width: 26%;
 				height: 50%;
@@ -290,7 +289,6 @@
 				$(window).scroll(function () {
 					if ($(this).scrollTop() > 150) {
 						$('body').addClass('change-color');
-						$(".brick").fadeIn(1000).css("display","inline-block");
 					};
 					if ($(this).scrollTop() < 150) {
 						$('body').removeClass('change-color');
