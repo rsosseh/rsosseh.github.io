@@ -117,41 +117,6 @@
 			.info h5{
 				font-size: 1.2em;
 			}
-
-
-
-
-
-
-
-
-
-			#brick-container{
-				width: 80%;
-				margin: 0 auto;
-				text-align: center;
-				display: none;
-			}
-			.brick{
-				font-family: 'Playfair Display', serif;
-				display: inline-block;
-				vertical-align: bottom;
-				width: 31%;
-				background-color: white;
-				border: 3px #B2B2B2 solid;
-				border-radius: 6px;
-				margin-bottom: 2%;
-
-			}
-			.brick img{
-				width: 100%;
-				border-radius: 2%;
-			}
-			.brick h3{
-				font-size: 1.5em;
-				color: #4C9FAB;
-				padding-bottom: 4%;
-			}
 			#contact{
 				background-color: #A3B5F3;
 				color: #16349E;
@@ -173,30 +138,53 @@
 			}
 			@media only screen and (max-width: 558px) {
 				#intro-text{
-					width: 90%;
+					width: 100%;
 				}
 				#landing h1{
-				font-size: 4em;
+					font-size: 5em;
 				}
 				#landing h2{
-					font-size: 2em;
+					font-size: 3em;
 				}
 				#landing h3{
-					padding-top: 3%;
 					font-size: 1em;
 				}
-				#pro-pic{
+				#pro-pic-container{
+					padding-top: 20%;
 					width: 100%;
-					padding-top: 4%;
+					height: initial;
+				}
+				#pro-pic{
+					position: initial;
+					top: initial;
+					transform: none;
 				}
 				#projects h1{
-					font-size: 5em;
+					font-size: 3em;
 				}
-				.brick{
-					border: 2px #535353 solid;
+				.proj-item{
+					margin: 10% 0;
+				}
+				.proj-pic{
+					width: 100%;
+					text-align: center;
+				}
+				.info-container{
+					float: initial !important;
+					width: 100%;
+					text-align: center;
+				}
+				.info{
+					top: initial !important;
+					position: relative !important;
+					transform: none;
+					width: 100% !important;
+				}
+				.info h3{
+					font-size: 2em;
 				}
 				#contact h1{
-					font-size: 5em;
+					font-size: 4em;
 				}
 			}
 		</style>
@@ -330,88 +318,6 @@
 				    </div>
 				</div>
 			</div>
-
-
-
-
-
-
-
-			
-			<div id="brick-container">
-				<div class="brick">
-					<a href="https://overthinkersanonymo.us/web-dub"><img src="imgs/dubrec.png" width="100%"></a>
-			        <div class="info-container">
-			        	<div class="info">
-				            <h3>Web Dub</h3>
-				            <h5>Created interface that decays a song with every listen</h5>
-				        </div>
-			        </div>
-			    </div>
-				
-				<div class="brick">
-					<a href="https://vimeo.com/217888898"><img src="imgs/door.png" width="100%"></a>
-			        <div class="info">
-			            <h3>Together</h3>
-			            <h5>Used Arduino and door sensors to create interactive sound installation in a Brown University dining hall</h5>
-			        </div>
-			    </div>
-				
-				<div class="brick">
-			        <a href='https://vimeo.com/151452558'><img src="imgs/sap1.png"></a>
-			        <div class="info">
-			            <h3>Skate and Play</h3>
-			            <h5>Sound Designer for a skateboard that creates music as you ride it</h5>
-			        </div>
-			    </div>
-				
-				<div class="brick">
-				<a href="https://github.com/rsosseh/Chatter"><img src="imgs/chat.png" width="100%"></a>
-			        <div class="info">
-			            <h3>Chatter</h3>
-			            <h5>Built a simple chatroom app. I designed the frontend in a very minimalist and clean style. The backend is fueled with Node.js and Postgres for realtime asycnhronous SQL calls</h5>
-			        </div>
-			    </div>
-				
-				<div class="brick">
-			        <a href='http://overthinkersanonymo.us/'><img src="imgs/oaa.png"></a>
-			        <div class="info">
-			            <h3>Overthinkers Anonymous</h3>
-			            <h5>Created a Javascript fueled audio visualizer for an original song of mine</h5>
-			        </div>
-			    </div>
-				
-				<div class="brick">
-			        <a href="http://agorapartnerships.org"><img src="imgs/ago.png"></a>
-			        <div class="info">
-			            <h3>Agora Partnerships</h3>
-			            <h5>I editted their WP site by adding plugins and making layout changes</h5>
-			        </div>
-			    </div>
-			    <div class="brick">
-			        <a href='imgs/newsletter.jpg'><img src="imgs/news.png"></a>
-			        <div class="info">
-			            <h3>Capitol Records Newsletter Design</h3>
-			            <h5>Refreshed the newsletter templates of Hollywood record label</h5>
-			        </div>
-			    </div>
-			    
-			    
-			    <div class="brick">
-			        <img src="imgs/fans.png">
-			        <div class="info">
-			            <h3>Fansome</h3>
-			            <h5>Created prototype of artist data visualizer</h5>
-			        </div>
-			    </div>
-			    <div class="brick">
-			        <a href='https://vimeo.com/155072344'><img src="imgs/beee.png"></a>
-			        <div class="info">
-			            <h3>Bee and Puppycat Re-sound Design</h3>
-			            <h5>Added new foley and music to an episode of this series</h5>
-			        </div>
-			    </div> 
-			</div> 
 		</div>
 		
 		<div id='contact'>
