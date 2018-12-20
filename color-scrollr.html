@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 <style>
 	body,html{
 		margin: 0;
@@ -23,15 +24,31 @@
 		background-color: #61a0ff;
 		border-radius: 100%;
 	}
+	#text{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		font-size: 1.5em;
+		transform: translate(-50%, -60%);
+		color: #fff;
+		font-family: 'Major Mono Display', monospace;;
+		font-weight: 100;
+	}
 </style>
 <span id="circle"></span>
+<p id="text">You ARe loVeD</p>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 	var size, r, g, b, b_r, b_g, b_b
+
+	var timer = setTimeout(auto_scroll(), 5000);
+
 	$(window).on("scroll", function(){
-		animate_ball($(this).scrollTop())
+		animate_page($(this).scrollTop())
+		console.log('he')
+		window.clearTimeout(timer)
 	})
-	function animate_ball(pos){
+	function animate_page(pos){
 		size = (150 * Math.sin(.0002 * pos)) + (50 * Math.cos(.0009 * pos)) + 150
 		r = (120 * Math.sin(.001 * pos)) + 127
 		g = (120 * Math.cos(.005 * pos)) + 127
@@ -42,6 +59,9 @@
 		$('#circle').css("width", size)
 		$('#circle').css("background-color", "rgba("+r+", "+g+", "+b+")")
 		$('body').css("background-color", "rgba("+b_r+", "+b_g+", 162)")
+	}
 
+	function auto_scroll(){
+		setInterval(console.log('hey'), 2000)
 	}
 </script>
