@@ -12,7 +12,7 @@
 	    background: transparent;
 	}
 	body{
-		background-color: #ffefa2;
+		background: #ffefa2;
 		height: 100000vh;
 
 	}
@@ -23,7 +23,7 @@
 		transform: translate(-50%, -50%);
 		height: 50px;
 		width: 50px;
-		background-color: #61a0ff;
+		background: #61a0ff;
 		border-radius: 100%;
 	}
 	#text{
@@ -59,8 +59,8 @@
 		b_g = (127 * Math.cos(.00094 * pos)) + 127
 		$('#circle').css("height", size)
 		$('#circle').css("width", size)
-		$('#circle').css("background", "rgb("+r+", "+g+", "+b+")")
-		$('body').css("background", "rgb("+b_r+", "+b_g+", 162)")
+		$('#circle').css("background", "rgb("+r+", "+g+", "+b+") !important")
+		$('body').css("background", "rgb("+b_r+", "+b_g+", 162) !important")
 	}
 
 	function auto_scroll(){
