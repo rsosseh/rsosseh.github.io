@@ -41,7 +41,7 @@
 <p id="text">You ARe loVeD</p>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-	var size, r, g, b, b_r, b_g, b_b
+	var size, r, g, b, rgb, b_rgb, b_r, b_g, b_b
 
 	var timer = setTimeout(auto_scroll(), 5000);
 
@@ -59,8 +59,12 @@
 		b_g = (127 * Math.cos(.00094 * pos)) + 127
 		$('#circle').css("height", size)
 		$('#circle').css("width", size)
-		$('#circle').css("background", "rgb("+r+", "+g+", "+b+") !important")
-		$('body').css("background", "rgb("+b_r+", "+b_g+", 162) !important")
+		rgb = "rgb("+parseInt(r)+","+parseInt(g)+","+parseInt(b)+")"
+		b_rgb = "rgb("+parseInt(b_r)+","+parseInt(b_g)+",162)"
+
+		$('body').css("background", "rgb("+parseInt(r)+", "+parseInt(b_g)+", 162) !important")
+		$('#circle').css("background", rgb)
+		$('body').css("background", b_rgb)
 	}
 
 	function auto_scroll(){
